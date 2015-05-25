@@ -41,7 +41,6 @@ The `StreatEasy::Property` object has the following methods:
 * .sales
 * .order(order_type)
 * .neighborhoods(list_of_neighborhoods)
-* .options(list_of_options)
 * .limit(int)
 * .all
 
@@ -83,13 +82,13 @@ properties = StreetEasy::Property.neighborhoods(['soho', 'murray-hill']).order(:
 ```ruby
 properties = StreetEasy::Property.sales
   .neighborhoods('soho', 'murray-hill', 'lower-east-side')
-  .options(:price, :area_name, :description_excerpt, :floorplan)
   .order(:least_expensive)
   .limit(30)
 ```
 
 ### full list of neighborhoods:
 ```ruby
+  'manhattan'
   'battery-park-city'
   'chelsea'
   'west-chelsea'
@@ -146,6 +145,75 @@ properties = StreetEasy::Property.sales
   'west-harlem'
 ```
 
+```ruby
+  'brooklyn'
+  'bedstuy'
+  'crown-heights'
+  'bushwick'
+  'williamsburg'
+  'brownsville'
+  'stuyvesant-heights'
+  'ocean-hill'
+  'clinton-hill'
+  'dumbo'
+  'downtown-brooklyn'
+  'boerum-hill'
+  'fort-greene'
+  'cobble-hill'
+  'vinegar-hill'
+  'greenpoint'
+  'prospect-heights'
+  'brooklyn-heights'
+  'cswd'
+  'carroll-gardens'
+  'red-hook'
+  'gowanus'
+  'park-slope'
+  'greenwood'
+  'crown-heights'
+  'sunset-park'
+  'windsor-terrace'
+  'prospect-park-south'
+  'flatbush'
+  'ditmas-park'
+  'prospect-lefferts-gardens'
+  'northeast-flatbush'
+  'east-new-york'
+  'canarsie'
+  'brownsville'
+  'weeksville'
+```
+
+```ruby
+  'queens'
+  'astoria'
+  'long-island-city'  
+  'sunnyside'
+  'woodside'
+  'jackson-heights'
+  'maspeth'
+  'elmhurst'
+  'corona'
+  'rego-park'
+  'little-neck'
+```
+
+### unit types
+```ruby
+  'D1 (condo)'
+  'P1 (coops)'
+  'X (houses)'
+  'M (multi-family)'
+  'A (land)'
+  '? (other)'
+  'Z (auctions)'
+```
+
+### amenities
+```ruby
+  'elevator'
+```
+
 
 ### list of .order options
 ```ruby
@@ -156,8 +224,7 @@ properties = StreetEasy::Property.sales
 
 ### list of .option parameters
 
-```ruby
-      
+```ruby 
   # default attributes
   :title
   :area_name
