@@ -222,47 +222,6 @@ properties = StreetEasy::Property.sales
   :newest
 ```
 
-### list of .option parameters
-
-```ruby 
-  # default attributes
-  :title
-  :area_name
-  :price
-  :bedrooms
-  :bathrooms
-  :size_sqft
-  :url
-  :medium_image_uri
-
-  # additional attributes
-  :source_label
-  :clean_address
-  :description_excerpt
-  :half_baths
-  :rooms_description
-  :addr_street
-  :addr_unit
-  :normalized_addr_unit
-  :addr_city
-  :addr_lat
-  :addr_lon
-  :size_sqft_num
-  :lot_size
-  :size_description
-  :ppsf
-  :ppsf_num
-  :ppsf_description
-  :created_at
-  :unit_type
-  :unit_type_label
-  :status
-  :price_cur
-  :floorplan
-  :open_house_start
-  :open_house_end
-  :sourceid
-```
 
 ## Contributing
 
